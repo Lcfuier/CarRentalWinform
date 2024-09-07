@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\LapTrinhC#\\Winform\\CarRental\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\dal\\dataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\dal\\dataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataAccessLayer.cs",
+              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\DAL\\DataAccessLayer.cs",
+              "RelativeDocumentMoniker": "CarRental\\DAL\\DataAccessLayer.cs",
+              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\DAL\\DataAccessLayer.cs",
+              "RelativeToolTip": "CarRental\\DAL\\DataAccessLayer.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T16:45:50.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmLogin.cs [Design]",
+              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmLogin.cs",
+              "RelativeDocumentMoniker": "CarRental\\GUI\\FrmLogin.cs",
+              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmLogin.cs [Design]",
+              "RelativeToolTip": "CarRental\\GUI\\FrmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T16:37:24.795Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
