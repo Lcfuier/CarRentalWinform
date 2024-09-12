@@ -67,7 +67,8 @@ namespace CarRental.BLL
                     var salt = GenerateSalt();
                     string passwordHash = HashPassword(user.PassWordHash, salt);
                     string saltString = Convert.ToBase64String(salt);
-                    string sqlQuery = $"Insert into Users values('" + user.Id + "','" + user.FullName + "','" + user.UserName + "','" + passwordHash + "','" + user.Roles + "', '" + user.UserStatus + "',N'" + saltString + "')";
+                    string sqlQuery = $@"Insert into Users (FullName,Username,PassWordHash,Roles,UserStatus,Salt)
+                        values('"  + user.FullName + "','" + user.UserName + "','" + passwordHash + "','" + user.Roles + "', '" + user.UserStatus + "',N'" + saltString + "')";
                     if (Dal.RunQuery(sqlQuery))
                     {
                         MessageBox.Show("Thêm thành công", "Thông báo");

@@ -214,6 +214,7 @@
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(145, 38);
             this.txtId.Name = "txtId";

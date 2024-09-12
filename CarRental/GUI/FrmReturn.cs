@@ -100,7 +100,6 @@ namespace CarRental.GUI
             txtCustomerId.Clear();
             txtCarId.Clear();
             txtCusName.Clear();
-            txtId.Focus();
             txtFine.Clear();
             txtDelay.Clear();
             txtAmount.Clear();
@@ -111,7 +110,6 @@ namespace CarRental.GUI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            txtId.Enabled = false;
             btnAdd.Enabled = false;
             btnDel.Enabled = false;
         }
@@ -146,7 +144,7 @@ namespace CarRental.GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtId.Text == "" || txtCustomerId.Text == "" || txtFee.Text == "" || txtCarId.Text == ""||txtAmount.Text==""||txtFine.Text==""||txtDelay.Text=="")
+            if ( txtCustomerId.Text == "" || txtFee.Text == "" || txtCarId.Text == ""||txtAmount.Text==""||txtFine.Text==""||txtDelay.Text=="")
             {
                 MessageBox.Show("Không thể để trống các trường", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -196,8 +194,12 @@ namespace CarRental.GUI
             {
                 DataTable dt = BllCar.GetCarById(txtCarId.Text);
                 int price= Convert.ToInt32(dt.Rows[0]["Price"].ToString());
+                int FineDelay = 0;
                 int fee = Convert.ToInt32(txtFee.Text.Replace(",", "").Replace(".", ""));
-                int FineDelay = GetDateReturn()*price+500000;
+                if(GetDateReturn() > 0)
+                {
+                  FineDelay  = GetDateReturn() * price + 500000;
+                } 
                 txtDelay.Text = GetDateReturn().ToString();
                 txtFine.Text = FineDelay.ToString();
                 txtAmount.Text = (fee + FineDelay).ToString();
@@ -245,6 +247,11 @@ namespace CarRental.GUI
                 string str = txtFindReturn.Text;
                 dgvReturn.DataSource = BllReturn.GetReturnDataTable(str);
             }
+        }
+
+        private void dgvReturn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

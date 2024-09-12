@@ -38,14 +38,22 @@ namespace CarRental.BLL
         }
         public void AddCustomer(Customer customer)
         {
-            string sqlQuery = $"Insert into Customer values('" + customer.Id+ "',N'" + customer.FullName + "',N'" + customer.Address+ "','" + customer.PhoneNumber +"')";
-            if (Dal.RunQuery(sqlQuery))
+            DataTable dt = Dal.GetDataTable("Select * from Customer Where Id='" + customer.Id + "'");
+            if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Thêm thành công", "Thông báo");
+                MessageBox.Show("Số CMND/CCCD đã tồn tại", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Thêm không thành công", "Thông báo");
+                string sqlQuery = $"Insert into Customer values('" + customer.Id + "',N'" + customer.FullName + "',N'" + customer.Address + "','" + customer.PhoneNumber + "')";
+                if (Dal.RunQuery(sqlQuery))
+                {
+                    MessageBox.Show("Thêm thành công", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công", "Thông báo");
+                }
             }
         }
         public void UpdateCustomer(Customer customer)

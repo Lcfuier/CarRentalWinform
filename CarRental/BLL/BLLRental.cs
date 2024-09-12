@@ -37,27 +37,33 @@ namespace CarRental.BLL
             return Dal.GetDataTable(s);
         }
 
-        public void AddRental(Rental rental)
+        public bool AddRental(Rental rental)
         {
-            string sqlQuery = $"Insert into Rental values('" + rental.Id + "','" + rental.StartDate + "','" + rental.EndDate + "','" + rental.Fee + "','" + rental.CarId+"','" + rental.CustomerId+"')";
+            string sqlQuery = $@"Insert into Rental (StartDate,EndDate,RentalFee,CarId,CustomerId)
+                values('" + rental.StartDate + "','" + rental.EndDate + "','" + rental.Fee + "','" + rental.CarId+"','" + rental.CustomerId+"')";
             if (Dal.RunQuery(sqlQuery))
             {
-                MessageBox.Show("Thêm thành công", "Thông báo");
+                return true; 
+                
             }
             else
             {
                 MessageBox.Show("Thêm không thành công", "Thông báo");
+                return false;
+                
             }
         }
-        public void UpdateRental(Rental rental)
+        public bool UpdateRental(Rental rental)
         {
             string sqlQuery = $"UPDATE Rental set StartDate = '" + rental.StartDate+ "',EndDate='" + rental.EndDate + "',RentalFee='" + rental.Fee + "',CarId='" + rental.CarId+ "',CustomerId='" + rental.CustomerId+"' Where Id='" + rental.Id + "'";
             if (Dal.RunQuery(sqlQuery))
             {
-                MessageBox.Show("Sửa thành công", "Thông báo");
+                return true;
+                
             }
             else
             {
+                return false;
                 MessageBox.Show("Sửa không thành công", "Thông báo");
             }
         }
@@ -86,6 +92,11 @@ namespace CarRental.BLL
             {
                 MessageBox.Show("Delete thuê xe không thành công", "Thông báo");
             }
+        }
+        public DataTable GetRentalByCarId(string Id)
+        {
+            string s = "Select * from Rental where CarId='"+Id+"'";
+            return Dal.GetDataTable(s);
         }
     }
 }

@@ -122,7 +122,6 @@ namespace CarRental.GUI
             txtCustomerId.Clear();
             txtCarId.Clear();
             txtCusName.Clear();
-            txtId.Focus();
             btnUpdate.Enabled = false;
             btnDel.Enabled = false;
             add = true;
@@ -148,7 +147,7 @@ namespace CarRental.GUI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtId.Text == "" || txtCustomerId.Text == "" || txtFee.Text == "" || txtCarId.Text == "")
+            if ( txtCustomerId.Text == "" || txtFee.Text == "" || txtCarId.Text == "")
             {
                 MessageBox.Show("Không thể để trống các trường", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -166,8 +165,11 @@ namespace CarRental.GUI
                     if (add)
                     {
                         LoadData();
-                        BllRental.AddRental(rental);
-                        BllCar.UpdateStatusCar(carId, "Rented");
+                       if(BllRental.AddRental(rental))
+                       {
+                            MessageBox.Show("Thêm thành công", "Thông báo");
+                            BllCar.UpdateStatusCar(carId, "Rented");
+                       }
                         btnUpdate.Enabled = true;
                         btnDel.Enabled = true;
                         add = false;
@@ -176,9 +178,14 @@ namespace CarRental.GUI
                     else
                     {
                         LoadData();
-                        BllRental.UpdateRental(rental);
-                        BllCar.UpdateStatusCar(carId, "Rented");
-                        BllCar.UpdateStatusCar(CarIdUpdated, "Available");
+                        if(BllRental.UpdateRental(rental)){
+                            MessageBox.Show("Sửa thành công", "Thông báo");
+                            if (carId != CarIdUpdated)
+                            {
+                                BllCar.UpdateStatusCar(carId, "Rented");
+                                BllCar.UpdateStatusCar(CarIdUpdated, "Available");
+                            }
+                        }
                         btnAdd.Enabled = true;
                         btnDel.Enabled = true;
                     }

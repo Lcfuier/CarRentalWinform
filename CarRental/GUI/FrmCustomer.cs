@@ -68,7 +68,7 @@ namespace CarRental.GUI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            txtId.Focus();
+            txtId.Enabled=false;
             btnAdd.Enabled = false;
             btnDel.Enabled = false;
         }
@@ -95,6 +95,7 @@ namespace CarRental.GUI
                     BllCustomer.UpdateCustomer(customer);
                     btnAdd.Enabled = true;
                     btnDel.Enabled = true;
+                    txtId.Enabled = true;
                 }
                 FrmCustomer_Load(sender, e);
             }
@@ -126,6 +127,11 @@ namespace CarRental.GUI
                 string str = txtFindCustomer.Text;
                 dgvCustomer.DataSource = BllCustomer.GetCustomerByName(str);
             }
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

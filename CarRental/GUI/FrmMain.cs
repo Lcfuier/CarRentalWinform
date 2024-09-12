@@ -88,6 +88,11 @@ namespace CarRental.GUI
             lbTotalCar.Text = numCar.ToString();
             lbTotalCus.Text = numCustomer.ToString();
             lbName.Text = user.FullName;
+            if (user.Roles == "User")
+            {
+                btnUser.Enabled=false;
+                btnReport.Enabled=false;
+            }
         }
 
         private void btnReport_Click(object sender, EventArgs e)

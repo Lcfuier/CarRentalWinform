@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\LapTrinhC#\\Winform\\CarRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\dal\\dataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\dal\\dataaccesslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\bll\\bllcar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\bll\\bllcar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\bll\\bllcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\bll\\bllcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +30,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DataAccessLayer.cs",
-              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\DAL\\DataAccessLayer.cs",
-              "RelativeDocumentMoniker": "CarRental\\DAL\\DataAccessLayer.cs",
-              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\DAL\\DataAccessLayer.cs",
-              "RelativeToolTip": "CarRental\\DAL\\DataAccessLayer.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAARAAAA",
+              "DocumentIndex": 1,
+              "Title": "BLLCustomer.cs",
+              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\BLL\\BLLCustomer.cs",
+              "RelativeDocumentMoniker": "CarRental\\BLL\\BLLCustomer.cs",
+              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\BLL\\BLLCustomer.cs",
+              "RelativeToolTip": "CarRental\\BLL\\BLLCustomer.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwCsAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T16:45:50.664Z",
+              "WhenOpened": "2024-09-12T12:33:49.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmLogin.cs [Design]",
-              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmLogin.cs",
-              "RelativeDocumentMoniker": "CarRental\\GUI\\FrmLogin.cs",
-              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmLogin.cs [Design]",
-              "RelativeToolTip": "CarRental\\GUI\\FrmLogin.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "BLLCar.cs",
+              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\BLL\\BLLCar.cs",
+              "RelativeDocumentMoniker": "CarRental\\BLL\\BLLCar.cs",
+              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\BLL\\BLLCar.cs",
+              "RelativeToolTip": "CarRental\\BLL\\BLLCar.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBcAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T16:37:24.795Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-09-12T12:31:30.692Z",
+              "EditorCaption": ""
             }
           ]
         }

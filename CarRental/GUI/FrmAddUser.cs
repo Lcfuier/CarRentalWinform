@@ -32,7 +32,7 @@ namespace CarRental.GUI
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtId.Text == "" || txtName.Text == "" || txtPassword.Text == "" || txtUsername.Text == "" || txtVerifyPass.Text == "" || cbRole.Text == "" || cbStatus.Text == "")
+            if ( txtName.Text == "" || txtPassword.Text == "" || txtUsername.Text == "" || txtVerifyPass.Text == "" || cbRole.Text == "" || cbStatus.Text == "")
             {
                 MessageBox.Show("Không thể để trống các trường", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -39,7 +39,8 @@ namespace CarRental.BLL
         }
         public bool AddReturn(ReturnCar returnCar)
         {
-            string sqlQuery = $"Insert into ReturnCar values('" + returnCar.Id + "','" + returnCar.StartDate + "','" + returnCar.EndDate + "','" + returnCar.Fee + "','" +returnCar.ReturnDate +"', '" + returnCar.FineDelay + "','" + returnCar.Amount + "','" +returnCar.CarId + "','" +returnCar.CustomerId +"')";
+            string sqlQuery = $@"Insert into ReturnCar (StartDate,EndDate,RentalFee,ReturnDate,FineDelay,TotalAmount,CarId,CustomerId)
+                values('" + returnCar.StartDate + "','" + returnCar.EndDate + "','" + returnCar.Fee + "','" +returnCar.ReturnDate +"', '" + returnCar.FineDelay + "','" + returnCar.Amount + "','" +returnCar.CarId + "','" +returnCar.CustomerId +"')";
             if (Dal.RunQuery(sqlQuery))
             {
                 return true;

@@ -21,14 +21,24 @@ namespace CarRental.BLL
         }
         public void AddCar(Car car)
         {
-            string sqlQuery = $"Insert into Car values('"+car.Id+"','"+car.Brand+"','"+car.Model+"','"+car.Status+"','"+car.Price+ "')";
-            if (Dal.RunQuery(sqlQuery))
+            DataTable dt = Dal.GetDataTable("Select * from Car Where Id='" + car.Id + "'");
+            if (dt.Rows.Count>0)
             {
-                MessageBox.Show("Thêm thành công", "Thông báo");
+                MessageBox.Show("Biển số xe đã tồn tại", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Thêm không thành công", "Thông báo");
+
+
+                string sqlQuery = $"Insert into Car values('" + car.Id + "','" + car.Brand + "','" + car.Model + "','" + car.Status + "','" + car.Price + "')";
+                if (Dal.RunQuery(sqlQuery))
+                {
+                    MessageBox.Show("Thêm thành công", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công", "Thông báo");
+                }
             }
         }
         public void UpdateCar(Car car)
@@ -77,7 +87,7 @@ namespace CarRental.BLL
         }
         public DataTable GetAllCarByStatus(string status)
         {
-            string s = "Select * from Car Where StatusCar='"+status+"'" ;
+            string s = "Select * from Car Where StatusCar like '%"+status+"%'" ;
             return Dal.GetDataTable(s);
         }
         public DataTable GetCarByBrand(string brand,string status)
@@ -91,6 +101,12 @@ namespace CarRental.BLL
             {
                  s= "Select * from Car where Brand like N'%" + brand + "%'And StatusCar='"+status+"'";
             }
+            return Dal.GetDataTable(s);
+        }
+        public DataTable GetCarByStatus(string status)
+        {
+            string s;
+            s = "Select * from Car where StatusCar='"+status+"'";
             return Dal.GetDataTable(s);
         }
     }

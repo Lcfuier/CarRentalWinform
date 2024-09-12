@@ -23,10 +23,13 @@ namespace CarRental.GUI
         {
             InitializeComponent();
             this.FrmMain = FrmMain;
+            cbFindStatus.Text = "Tất cả";
         }
         BLLCar BllCar = new BLLCar();
+        BLLRental BllRental= new BLLRental();
         bool add = false;
         Car car = new Car();
+        string statusCar="";
         private void LoadData()
         {
             car.Id = txtId.Text;
@@ -34,10 +37,11 @@ namespace CarRental.GUI
             car.Model = txtModel.Text;
             car.Price = int.Parse(txtPrice.Text.Replace(",", "").Replace(".", ""));
             car.Status = cbStatus.Text;
+            
         }
         private void FrmCar_Load(object sender, EventArgs e)
         {
-            dgvCar.DataSource = BllCar.GetAllCar();
+            cbChange();
             txtId.DataBindings.Clear();
             txtId.DataBindings.Add("Text", dgvCar.DataSource, "Id");
             txtBrand.DataBindings.Clear();
@@ -46,7 +50,7 @@ namespace CarRental.GUI
             txtModel.DataBindings.Add("Text", dgvCar.DataSource, "Model");
             cbStatus.DataBindings.Clear();
             cbStatus.DataBindings.Add("Text", dgvCar.DataSource, "StatusCar");
-            txtPrice.DataBindings.Clear();
+            txtPrice.DataBindings.Clear();   
             txtPrice.DataBindings.Add("Text", dgvCar.DataSource, "Price");
             txtPrice.DataBindings[0].FormattingEnabled = true;
             txtPrice.DataBindings[0].FormatString = "#,## ";
@@ -76,7 +80,7 @@ namespace CarRental.GUI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            txtId.Focus();
+            txtId.Enabled=false;
             btnAdd.Enabled = false;
             btnDel.Enabled = false;
         }
@@ -110,9 +114,25 @@ namespace CarRental.GUI
                 else
                 {
                     LoadData();
-                    BllCar.UpdateCar(car);
+                    if (statusCar == car.Status)
+                    {
+                        BllCar.UpdateCar(car);
+                    }
+                    else
+                    {
+                        DataTable dt = BllRental.GetRentalByCarId(car.Id);
+                        if (dt.Rows.Count == 1)
+                        {
+                            MessageBox.Show("Xe đang thuê, không thể cập nhật trạng thái !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            BllCar.UpdateCar(car);
+                        }
+                    }
                     btnAdd.Enabled = true;
                     btnDel.Enabled = true;
+                    txtId.Enabled = true; 
                 }
                 FrmCar_Load(sender, e);
             }
@@ -133,8 +153,59 @@ namespace CarRental.GUI
             else
             {
                 string str=txtFindCar.Text;
-                dgvCar.DataSource = BllCar.GetCarByBrand(str,"");
+                string statusCar=cbFindStatus.Text;
+                if (statusCar == "Tất cả")
+                {
+                    dgvCar.DataSource = BllCar.GetCarByBrand(str, "");
+
+                }
+                else if (statusCar == "Chưa cho thuê")
+                {
+                    dgvCar.DataSource = BllCar.GetCarByBrand(str, "Available");
+                }
+                else if (statusCar == "Đã cho thuê")
+                {
+                    dgvCar.DataSource = BllCar.GetCarByBrand(str,"Rented");
+                }
+                
             }    
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void cbChange()
+        {
+            if (cbFindStatus.Text == "Tất cả")
+            {
+                dgvCar.DataSource = BllCar.GetAllCar();
+
+            }
+            else if (cbFindStatus.Text == "Chưa cho thuê")
+            {
+                dgvCar.DataSource = BllCar.GetCarByStatus("Available");
+            }
+            else if (cbFindStatus.Text == "Đã cho thuê")
+            {
+                dgvCar.DataSource = BllCar.GetCarByStatus("Rented");
+            }
+        }
+        private void cbFindStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbChange();
+        }
+
+        private void btnDelCb_Click(object sender, EventArgs e)
+        {
+            cbStatus.Text = "";
+            cbStatus.SelectedItem = null;
+            FrmCar_Load(sender, e);
+        }
+
+        private void dgvCar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            statusCar = dgvCar.SelectedRows[0].Cells[3].Value.ToString();
         }
     }
 }
