@@ -17,8 +17,11 @@ namespace CarRental.DTOs
         private string _Fee;
         private string _FineDelay;
         private string _Amount;
+        private string _UserId;
+        private string _Note;
+        private string _Surcharge;
         public ReturnCar() { }
-        public ReturnCar(string id, string customerId, string carId, string startDate, string endDate, string fee, string fineDelay, string amount, string returnDate)
+        public ReturnCar(string id, string customerId, string carId, string startDate, string endDate, string fee, string fineDelay, string amount, string returnDate,string UserId, string note, string surcharge)
         {
             _Id = id;
             _CustomerId = customerId;
@@ -29,6 +32,9 @@ namespace CarRental.DTOs
             _FineDelay = fineDelay;
             _Amount = amount;
             _ReturnDate = returnDate;
+            _UserId = UserId;
+            _Note = note;
+            _Surcharge = surcharge;
         }
         public string Id
         {
@@ -101,6 +107,30 @@ namespace CarRental.DTOs
                 return _ReturnDate;
             }
             set { _ReturnDate = value; }
+        }
+        public string UserId
+        {
+            get
+            {
+                return _UserId;
+            }
+            set { _UserId = value; }
+        }
+        public string Note
+        {
+            get
+            {
+                return _Note;
+            }
+            set { _Note = value; }
+        }
+        public string Surcharge
+        {
+            get
+            {
+                return _Surcharge;
+            }
+            set { _Surcharge = value; }
         }
     }
 }

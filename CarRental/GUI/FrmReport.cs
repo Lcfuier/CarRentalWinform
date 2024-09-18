@@ -27,6 +27,23 @@ namespace CarRental.GUI
         BLLReturn BllReturn = new BLLReturn();  
         private void FrmReport_Load(object sender, EventArgs e)
         {
+           
+            
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmMain.Show();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
             try
             {
                 //đặt đường dẫn
@@ -34,7 +51,7 @@ namespace CarRental.GUI
                 //tạo rpDataSource
                 ReportDataSource rp = new ReportDataSource();
                 rp.Name = "DataSet1";//đặt tên trùng report
-                rp.Value = BllReturn.GetAllReturn();
+                rp.Value = BllReturn.GetReturnReport( dtpStart.Value.ToString(), dtpEnd.Value.ToString());
                 rpvReturn.LocalReport.DataSources.Clear();
                 rpvReturn.LocalReport.DataSources.Add(rp);
 
@@ -44,13 +61,6 @@ namespace CarRental.GUI
             {
                 MessageBox.Show(ex.Message.ToString());
             }
-            
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FrmMain.Show();
         }
     }
 }

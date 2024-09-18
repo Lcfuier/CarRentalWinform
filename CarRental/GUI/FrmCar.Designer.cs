@@ -112,9 +112,10 @@
             this.cbFindStatus.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFindStatus.FormattingEnabled = true;
             this.cbFindStatus.Items.AddRange(new object[] {
+            "Tất cả",
             "Đã cho thuê",
             "Chưa cho thuê",
-            "Tất cả"});
+            "Đang bảo dưỡng"});
             this.cbFindStatus.Location = new System.Drawing.Point(147, 10);
             this.cbFindStatus.Name = "cbFindStatus";
             this.cbFindStatus.Size = new System.Drawing.Size(167, 32);
@@ -216,7 +217,8 @@
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
             "Available",
-            "Rented"});
+            "Rented",
+            "Maintenance"});
             this.cbStatus.Location = new System.Drawing.Point(799, 109);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(314, 32);

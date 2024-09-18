@@ -15,14 +15,16 @@ namespace CarRental.GUI
     public partial class FrmUser : Form
     {
         private Form FrmMain;
+        private User userDTO;
         public FrmUser()
         {
             InitializeComponent();
         }
-        public FrmUser(Form FrmMain)
+        public FrmUser(Form FrmMain,User userDTO)
         {
             InitializeComponent();
             this.FrmMain = FrmMain;
+            this.userDTO = userDTO;
         }
         BLLUser BllUser= new BLLUser();
         User user = new User();
@@ -57,7 +59,7 @@ namespace CarRental.GUI
 
         private void FrmUser_Load(object sender, EventArgs e)
         {
-            dgvUser.DataSource = BllUser.GetUserTable("");
+            dgvUser.DataSource = BllUser.GetUserTable("",userDTO.Id);
             txtId.DataBindings.Clear();
             txtId.DataBindings.Add("Text", dgvUser.DataSource, "Id");
             txtFullname.DataBindings.Clear();
@@ -124,7 +126,7 @@ namespace CarRental.GUI
             else
             {
                 string str = txtFindUser.Text;
-                dgvUser.DataSource = BllUser.GetUserTable(str);
+                dgvUser.DataSource = BllUser.GetUserTable(str,userDTO.Id);
             }
         }
     }

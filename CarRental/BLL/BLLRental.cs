@@ -98,5 +98,6 @@ namespace CarRental.BLL
             string s = "Select * from Rental where CarId='"+Id+"'";
             return Dal.GetDataTable(s);
         }
+
     }
 }

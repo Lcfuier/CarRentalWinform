@@ -75,6 +75,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CarRentalDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CarRentalDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarRentalDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CarRentalDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarRentalDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CarRentalDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarRentalDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAL\DataAccessLayer.cs" />
     <Compile Include="DTOs\Car.cs" />
     <Compile Include="DTOs\Customer.cs" />
@@ -86,6 +101,12 @@
     </Compile>
     <Compile Include="GUI\FrmAddUser.Designer.cs">
       <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmBill.Designer.cs">
+      <DependentUpon>FrmBill.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FrmCar.cs">
       <SubType>Form</SubType>
@@ -156,8 +177,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="GUI\ReportBill.rdlc" />
     <EmbeddedResource Include="GUI\FrmAddUser.resx">
       <DependentUpon>FrmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmBill.resx">
+      <DependentUpon>FrmBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmCar.resx">
       <DependentUpon>FrmCar.cs</DependentUpon>
@@ -213,6 +238,39 @@
     </None>
     <None Include="CarRentalDataSet.xss">
       <DependentUpon>CarRentalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalDataSet1.xsc">
+      <DependentUpon>CarRentalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarRentalDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarRentalDataSet1.xss">
+      <DependentUpon>CarRentalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalDataSet2.xsc">
+      <DependentUpon>CarRentalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarRentalDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarRentalDataSet2.xss">
+      <DependentUpon>CarRentalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalDataSet3.xsc">
+      <DependentUpon>CarRentalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CarRentalDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarRentalDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarRentalDataSet3.xss">
+      <DependentUpon>CarRentalDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

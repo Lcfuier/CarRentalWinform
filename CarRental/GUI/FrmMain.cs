@@ -57,7 +57,7 @@ namespace CarRental.GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmReturn f = new FrmReturn(this);
+            FrmReturn f = new FrmReturn(this,user);
             this.Hide();
             f.ShowDialog();
         }
@@ -70,7 +70,7 @@ namespace CarRental.GUI
             }
             else
             {
-                FrmUser f = new FrmUser(this);
+                FrmUser f = new FrmUser(this,user);
                 this.Hide();
                 f.ShowDialog();
             }

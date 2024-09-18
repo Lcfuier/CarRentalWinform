@@ -81,17 +81,17 @@ namespace CarRental.BLL
             }
             
         }
-        public DataTable GetUserTable(string str)
+        public DataTable GetUserTable(string str,string userId)
         {
             string s;
             if (str == "")
             {
-                s = $@"Select Id,FullName,UserName,Roles,UserStatus From Users"; 
+                s = $@"Select Id,FullName,UserName,Roles,UserStatus From Users Where Not Id ='"+userId+"'"; 
             }
             else
             {
                 s= $@"Select Id,FullName,UserName,Roles,UserStatus From Users
-                    Where Fullname Like N'%"+str+"%'";
+                    Where Fullname Like N'%"+str+ "%'AND Not Id ='"+userId+"'";
             }
             return Dal.GetDataTable(s);
         }

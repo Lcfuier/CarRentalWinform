@@ -72,3 +72,4 @@ D:\LapTrinhC#\Winform\CarRental\CarRental\bin\Debug\zh-CHS\Microsoft.ReportViewe
 D:\LapTrinhC#\Winform\CarRental\CarRental\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\LapTrinhC#\Winform\CarRental\CarRental\obj\Debug\CarRental.GUI.FrmReport.resources
 D:\LapTrinhC#\Winform\CarRental\CarRental\obj\Debug\CarRental.csproj.Up2Date
+D:\LapTrinhC#\Winform\CarRental\CarRental\obj\Debug\CarRental.GUI.FrmBill.resources

@@ -167,7 +167,11 @@ namespace CarRental.GUI
                 {
                     dgvCar.DataSource = BllCar.GetCarByBrand(str,"Rented");
                 }
-                
+                else if (statusCar == "Đang bảo dưỡng")
+                {
+                    dgvCar.DataSource = BllCar.GetCarByBrand(str, "Maintenance");
+                }
+
             }    
         }
 
@@ -189,6 +193,10 @@ namespace CarRental.GUI
             else if (cbFindStatus.Text == "Đã cho thuê")
             {
                 dgvCar.DataSource = BllCar.GetCarByStatus("Rented");
+            }
+            else if (cbFindStatus.Text == "Đang bảo dưỡng")
+            {
+                dgvCar.DataSource = BllCar.GetCarByStatus("Maintenance");
             }
         }
         private void cbFindStatus_SelectedIndexChanged(object sender, EventArgs e)

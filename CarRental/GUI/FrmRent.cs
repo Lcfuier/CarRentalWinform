@@ -59,6 +59,10 @@ namespace CarRental.GUI
             DateTime d2 = dtpEnd.Value.Date;
             TimeSpan t = d2 - d1;
             int RentalDate = Convert.ToInt32(t.TotalDays);
+            if (RentalDate == 0)
+            {
+                return 1;
+            }
             return RentalDate;
         }
         private void LoadData()

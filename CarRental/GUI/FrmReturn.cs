@@ -15,14 +15,16 @@ namespace CarRental.GUI
     public partial class FrmReturn : Form
     {
         private Form FrmMain;
+        private User user;
         public FrmReturn()
         {
             InitializeComponent();
         }
-        public FrmReturn(Form FrmMain)
+        public FrmReturn(Form FrmMain, User user)
         {
             InitializeComponent();
             this.FrmMain = FrmMain;
+            this.user = user;   
         }
         BLLRental BllRental = new BLLRental();
         BLLCar BllCar = new BLLCar();
@@ -33,6 +35,7 @@ namespace CarRental.GUI
         bool add = false;
         string CarId;
         string RentalId;
+        string delayDate;
         private void FrmReturn_Load(object sender, EventArgs e)
         {
             dgvReturn.DataSource = BllReturn.GetReturnDataTable("");
@@ -55,17 +58,25 @@ namespace CarRental.GUI
             txtAmount.DataBindings.Clear();
             txtAmount.DataBindings.Add("Text", dgvReturn.DataSource, "RentalFee");
             txtAmount.DataBindings[0].FormattingEnabled = true;
-            txtAmount.DataBindings[0].FormatString = "#,## ";
+            txtAmount.DataBindings[0].FormatString = "#,##";
             //
             txtFine.DataBindings.Clear();
             txtFine.DataBindings.Add("Text", dgvReturn.DataSource, "FineDelay");
             txtFine.DataBindings[0].FormattingEnabled = true;
-            txtFine.DataBindings[0].FormatString = "#,## ";
+            txtFine.DataBindings[0].FormatString = "#,##";
             //
             txtFee.DataBindings.Clear();
             txtFee.DataBindings.Add("Text", dgvReturn.DataSource, "RentalFee");
             txtFee.DataBindings[0].FormattingEnabled = true;
-            txtFee.DataBindings[0].FormatString = "#,## ";
+            txtFee.DataBindings[0].FormatString = "#,##";
+            //
+            txtSur.DataBindings.Clear();
+            txtSur.DataBindings.Add("Text", dgvReturn.DataSource, "Surcharge");
+            txtSur.DataBindings[0].FormattingEnabled = true;
+            txtSur.DataBindings[0].FormatString = "#,##";
+            //
+            txtNote.DataBindings.Clear();
+            txtNote.DataBindings.Add("Text", dgvReturn.DataSource, "Note");
             //
             txtCusName.DataBindings.Clear();
             txtCusName.DataBindings.Add("Text", dgvReturn.DataSource, "FullName");
@@ -86,6 +97,17 @@ namespace CarRental.GUI
             returnCar.ReturnDate=dtpReturn.Value.Date.ToString();
             returnCar.FineDelay = txtFine.Text.Replace(",", "").Replace(".", "");
             returnCar.Amount=txtAmount.Text.Replace(",", "").Replace(".", "");
+            returnCar.UserId = user.Id; 
+            returnCar.Note= txtNote.Text;
+            if (txtSur.Text == "")
+            {
+                returnCar.Surcharge = "0"; 
+            }
+            else
+            {
+               returnCar.Surcharge = txtSur.Text.Replace(",", "").Replace(".", "");
+            }
+             
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -103,6 +125,8 @@ namespace CarRental.GUI
             txtFine.Clear();
             txtDelay.Clear();
             txtAmount.Clear();
+            txtNote.Clear();
+            txtSur.Clear();
             btnUpdate.Enabled = false;
             btnDel.Enabled = false;
             add = true;
@@ -160,6 +184,11 @@ namespace CarRental.GUI
                         MessageBox.Show("Thêm thành công", "Thông báo");
                         BllCar.UpdateStatusCar(carId, "Available");
                         BllRental.DeleteRentalById(RentalId);
+                        if (MessageBox.Show("Bạn có muốn xuất hóa đơn không ? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            FrmBill f= new FrmBill(user,returnCar,delayDate,txtCusName.Text);
+                            f.ShowDialog();
+                        }
                     }
                     else
                     {
@@ -195,14 +224,24 @@ namespace CarRental.GUI
                 DataTable dt = BllCar.GetCarById(txtCarId.Text);
                 int price= Convert.ToInt32(dt.Rows[0]["Price"].ToString());
                 int FineDelay = 0;
+                int Sur =0;
+                if (txtSur.Text == "" || txtSur.Text == "0")
+                {
+                    Sur = 0;
+                }
+                else
+                {
+                    Sur = Convert.ToInt32(txtSur.Text.Replace(",", "").Replace(".", ""));
+                }
                 int fee = Convert.ToInt32(txtFee.Text.Replace(",", "").Replace(".", ""));
                 if(GetDateReturn() > 0)
                 {
                   FineDelay  = GetDateReturn() * price + 500000;
                 } 
                 txtDelay.Text = GetDateReturn().ToString();
+                delayDate= GetDateReturn().ToString();
                 txtFine.Text = FineDelay.ToString();
-                txtAmount.Text = (fee + FineDelay).ToString();
+                txtAmount.Text = (fee + FineDelay+Sur).ToString();
             }
         }
         private void checkTime()
@@ -252,6 +291,11 @@ namespace CarRental.GUI
         private void dgvReturn_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtSur_TextChanged(object sender, EventArgs e)
+        {
+            ReturnDelay();
         }
     }
 }
