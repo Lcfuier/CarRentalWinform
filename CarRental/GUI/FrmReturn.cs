@@ -97,8 +97,15 @@ namespace CarRental.GUI
             returnCar.ReturnDate=dtpReturn.Value.Date.ToString();
             returnCar.FineDelay = txtFine.Text.Replace(",", "").Replace(".", "");
             returnCar.Amount=txtAmount.Text.Replace(",", "").Replace(".", "");
-            returnCar.UserId = user.Id; 
-            returnCar.Note= txtNote.Text;
+            returnCar.UserId = user.Id;
+            if (txtNote.Text == "")
+            {
+                returnCar.Note = "Khong";
+            }
+            else
+            {
+                returnCar.Note= txtNote.Text;
+            }
             if (txtSur.Text == "")
             {
                 returnCar.Surcharge = "0"; 

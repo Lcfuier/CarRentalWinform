@@ -547,7 +547,7 @@
                     <Style>
                       <FontFamily>TImes New Roman</FontFamily>
                       <FontWeight>Bold</FontWeight>
-                      <Format>#,0.0'VND';(#,0.0'VND')</Format>
+                      <Format>#,##</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -723,7 +723,7 @@
                     <Style>
                       <FontFamily>TImes New Roman</FontFamily>
                       <FontWeight>Bold</FontWeight>
-                      <Format>#,0.0'VND';(#,0.0'VND')</Format>
+                      <Format>#,##</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -790,7 +790,7 @@
                     <Style>
                       <FontFamily>TImes New Roman</FontFamily>
                       <FontWeight>Bold</FontWeight>
-                      <Format>#,0.0'VND';(#,0.0'VND')</Format>
+                      <Format>#,##</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -900,7 +900,7 @@
                     <Style>
                       <FontFamily>TImes New Roman</FontFamily>
                       <FontWeight>Bold</FontWeight>
-                      <Format>#,0.0'VND';(#,0.0'VND')</Format>
+                      <Format>#,##</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>

@@ -3,56 +3,32 @@
   "WorkspaceRootPath": "D:\\LapTrinhC#\\Winform\\CarRental\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\reportbill.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\reportbill.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\bll\\blluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\bll\\blluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\reportreturncar.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\reportreturncar.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|D:\\LapTrinhC#\\Winform\\CarRental\\carrental\\gui\\frmreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|D:\\LapTrinhC#\\Winform\\CarRental\\carrental\\gui\\frmrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\bll\\bllreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\bll\\bllreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|D:\\LapTrinhC#\\Winform\\CarRental\\carrental\\gui\\frmreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmrent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|d:\\laptrinhc#\\winform\\carrental\\carrental\\gui\\frmreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\gui\\frmreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|D:\\LapTrinhC#\\Winform\\CarRental\\carrental\\bll\\bllreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C14F95-89CE-4C20-A431-5EA865BBCAB5}|CarRental\\CarRental.csproj|solutionrelative:carrental\\bll\\bllreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -91,144 +67,69 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmMain.cs",
-              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmMain.cs",
-              "RelativeDocumentMoniker": "CarRental\\GUI\\FrmMain.cs",
-              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmMain.cs",
-              "RelativeToolTip": "CarRental\\GUI\\FrmMain.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAuwEgAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T17:15:48.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmMain.cs [Design]",
-              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmMain.cs",
-              "RelativeDocumentMoniker": "CarRental\\GUI\\FrmMain.cs",
-              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmMain.cs [Design]",
-              "RelativeToolTip": "CarRental\\GUI\\FrmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T17:15:44.962Z",
+              "Title": "ReportBill.rdlc [Design]",
+              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\ReportBill.rdlc",
+              "RelativeDocumentMoniker": "CarRental\\GUI\\ReportBill.rdlc",
+              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\ReportBill.rdlc [Design]",
+              "RelativeToolTip": "CarRental\\GUI\\ReportBill.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2024-09-18T17:30:29.729Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BLLUser.cs",
-              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\BLL\\BLLUser.cs",
-              "RelativeDocumentMoniker": "CarRental\\BLL\\BLLUser.cs",
-              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\BLL\\BLLUser.cs",
-              "RelativeToolTip": "CarRental\\BLL\\BLLUser.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAwF0AAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T17:12:20.743Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FrmUser.cs",
-              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmUser.cs",
-              "RelativeDocumentMoniker": "CarRental\\GUI\\FrmUser.cs",
-              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmUser.cs",
-              "RelativeToolTip": "CarRental\\GUI\\FrmUser.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAcwD0AAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T17:12:18.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmUser.cs [Design]",
-              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmUser.cs",
-              "RelativeDocumentMoniker": "CarRental\\GUI\\FrmUser.cs",
-              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmUser.cs [Design]",
-              "RelativeToolTip": "CarRental\\GUI\\FrmUser.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T17:12:15.755Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "ReportReturnCar.rdlc [Design]",
               "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\ReportReturnCar.rdlc",
               "RelativeDocumentMoniker": "CarRental\\GUI\\ReportReturnCar.rdlc",
               "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\ReportReturnCar.rdlc [Design]",
               "RelativeToolTip": "CarRental\\GUI\\ReportReturnCar.rdlc [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2024-09-18T17:02:40.859Z",
+              "WhenOpened": "2024-09-18T17:27:55.521Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FrmReport.cs",
-              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmReport.cs",
-              "RelativeDocumentMoniker": "CarRental\\GUI\\FrmReport.cs",
-              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmReport.cs",
-              "RelativeToolTip": "CarRental\\GUI\\FrmReport.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAArwDUAAAAQAAAA",
+              "DocumentIndex": 1,
+              "Title": "FrmMain.cs",
+              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmMain.cs",
+              "RelativeDocumentMoniker": "CarRental\\GUI\\FrmMain.cs",
+              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmMain.cs",
+              "RelativeToolTip": "CarRental\\GUI\\FrmMain.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAAAEgAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T16:39:04.084Z",
+              "WhenOpened": "2024-09-18T17:15:48.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FrmReport.cs [Design]",
-              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmReport.cs",
-              "RelativeDocumentMoniker": "CarRental\\GUI\\FrmReport.cs",
-              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmReport.cs [Design]",
-              "RelativeToolTip": "CarRental\\GUI\\FrmReport.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T16:32:24.075Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "FrmRent.cs",
               "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmRent.cs",
               "RelativeDocumentMoniker": "CarRental\\GUI\\FrmRent.cs",
               "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmRent.cs",
               "RelativeToolTip": "CarRental\\GUI\\FrmRent.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAkwD8AAAAZAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAA5wD8AAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T15:41:50.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FrmRent.cs [Design]",
-              "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmRent.cs",
-              "RelativeDocumentMoniker": "CarRental\\GUI\\FrmRent.cs",
-              "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmRent.cs [Design]",
-              "RelativeToolTip": "CarRental\\GUI\\FrmRent.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T15:41:47.953Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "FrmReturn.cs",
               "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmReturn.cs",
               "RelativeDocumentMoniker": "CarRental\\GUI\\FrmReturn.cs",
               "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmReturn.cs",
               "RelativeToolTip": "CarRental\\GUI\\FrmReturn.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAAwFwAAAAgAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAswGYAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T15:32:26.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 5,
               "Title": "FrmReturn.cs [Design]",
               "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\GUI\\FrmReturn.cs",
               "RelativeDocumentMoniker": "CarRental\\GUI\\FrmReturn.cs",
@@ -240,13 +141,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
               "Title": "BLLReturn.cs",
               "DocumentMoniker": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\BLL\\BLLReturn.cs",
               "RelativeDocumentMoniker": "CarRental\\BLL\\BLLReturn.cs",
               "ToolTip": "D:\\LapTrinhC#\\Winform\\CarRental\\CarRental\\BLL\\BLLReturn.cs",
               "RelativeToolTip": "CarRental\\BLL\\BLLReturn.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAuwFEAAAAIAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAADwvyEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T15:49:04.503Z",
               "EditorCaption": ""

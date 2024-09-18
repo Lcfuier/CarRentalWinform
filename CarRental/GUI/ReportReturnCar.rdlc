@@ -709,6 +709,7 @@
                               <Value>=Fields!RentalFee.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <Format>##,#</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -743,6 +744,7 @@
                               <Value>=Fields!FineDelay.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <Format>##,#</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -777,6 +779,7 @@
                               <Value>=Fields!Surcharge.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <Format>##,#</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -845,6 +848,7 @@
                               <Value>=Fields!TotalAmount.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <Format>##,#</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -929,6 +933,7 @@
                               <Value>=Sum(Fields!TotalAmount.Value, "DataSet1")</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <Format>##,#</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>

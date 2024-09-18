@@ -24,14 +24,14 @@ namespace CarRental.BLL
             string s;
             if (str == "")
             {
-                s= $@"SELECT Top 7 ReturnCar.Id, ReturnCar.StartDate,ReturnCar.EndDate,ReturnCar.RentalFee,ReturnCar.CustomerId,Customer.FullName,ReturnCar.CarId,ReturnCar.Note,ReturnCar.Surcharge,ReturnCar.ReturnDate,ReturnCar.FineDelay,ReturnCar.TotalAmount
+                s= $@"SELECT ReturnCar.Id, ReturnCar.StartDate,ReturnCar.EndDate,ReturnCar.RentalFee,ReturnCar.CustomerId,Customer.FullName,ReturnCar.CarId,ReturnCar.Note,ReturnCar.Surcharge,ReturnCar.ReturnDate,ReturnCar.FineDelay,ReturnCar.TotalAmount
                 FROM ReturnCar
                 INNER JOIN Customer ON ReturnCar.CustomerId=Customer.Id
                 ORDER BY ReturnCar.Id DESC";
             }
             else
             {
-                 s= $@"SELECT Top 7 ReturnCar.Id, ReturnCar.StartDate,ReturnCar.EndDate,ReturnCar.RentalFee,ReturnCar.CustomerId,Customer.FullName,ReturnCar.CarId,ReturnCar.Note,ReturnCar.Surcharge,ReturnCar.ReturnDate,ReturnCar.FineDelay,ReturnCar.TotalAmount
+                 s= $@"SELECT ReturnCar.Id, ReturnCar.StartDate,ReturnCar.EndDate,ReturnCar.RentalFee,ReturnCar.CustomerId,Customer.FullName,ReturnCar.CarId,ReturnCar.Note,ReturnCar.Surcharge,ReturnCar.ReturnDate,ReturnCar.FineDelay,ReturnCar.TotalAmount
                 FROM ReturnCar
                 INNER JOIN Customer ON ReturnCar.CustomerId=Customer.Id
                 Where Customer.FullName Like N'%" +str+ "%' ORDER BY ReturnCar.Id DESC";
