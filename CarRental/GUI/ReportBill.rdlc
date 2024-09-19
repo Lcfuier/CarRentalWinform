@@ -9,7 +9,36 @@
       </ConnectionProperties>
       <rd:DataSourceID>c65ad430-5d57-4980-a36e-dae6b2d5bfcf</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="QRDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>5219b12a-be72-47a3-9e6f-df78d1bd2e09</rd:DataSourceID>
+    </DataSource>
   </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>QRDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Image">
+          <DataField>Image</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>QRDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\LapTrinhC#\Winform\CarRental\CarRental\QRDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>QRCode</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -21,7 +50,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value> HÓA ĐƠN</Value>
+                    <Value> HÓA ĐƠN TRẢ XE</Value>
                     <Style>
                       <FontFamily>TIMEs New Roman</FontFamily>
                       <FontSize>18pt</FontSize>
@@ -114,7 +143,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>8.69699cm</Top>
+            <Top>11.09588cm</Top>
             <Left>2.05372cm</Left>
             <Height>0.67938cm</Height>
             <Width>9.98567cm</Width>
@@ -764,8 +793,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>3.00458in</Top>
-            <Left>1.20452in</Left>
+            <Top>2.71986in</Top>
+            <Left>1.2184in</Left>
             <Height>0.25in</Height>
             <Width>1.62916in</Width>
             <ZIndex>22</ZIndex>
@@ -798,8 +827,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox11</rd:DefaultName>
-            <Top>3.00458in</Top>
-            <Left>2.84757in</Left>
+            <Top>2.71986in</Top>
+            <Left>2.86145in</Left>
             <Height>0.25in</Height>
             <Width>1.75291in</Width>
             <ZIndex>23</ZIndex>
@@ -966,8 +995,23 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Image Name="Image2">
+            <Source>Database</Source>
+            <Value>=First(Fields!Image.Value, "DataSet1")</Value>
+            <MIMEType>image/bmp</MIMEType>
+            <Top>2.99901in</Top>
+            <Left>2.0281in</Left>
+            <Height>1.3in</Height>
+            <Width>1.3in</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
         </ReportItems>
-        <Height>4.01611in</Height>
+        <Height>4.82528in</Height>
         <Style />
       </Body>
       <Width>5.62722in</Width>
@@ -1033,7 +1077,7 @@
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>3</NumberOfRows>
+      <NumberOfRows>4</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>

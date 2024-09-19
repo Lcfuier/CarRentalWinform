@@ -16,14 +16,16 @@ namespace CarRental.GUI
     public partial class FrmRent : Form
     {
         private Form FrmMain;
+        private User user;
         public FrmRent()
         {
             InitializeComponent();
         }
-        public FrmRent(Form FrmMain)
+        public FrmRent(Form FrmMain,User user)
         {
             InitializeComponent();
             this.FrmMain = FrmMain;
+            this.user = user;
         }
         BLLRental BllRental=new BLLRental();
         BLLCar BllCar=new BLLCar();
@@ -173,7 +175,12 @@ namespace CarRental.GUI
                        {
                             MessageBox.Show("Thêm thành công", "Thông báo");
                             BllCar.UpdateStatusCar(carId, "Rented");
-                       }
+                            if (MessageBox.Show("Bạn có muốn xem hóa đơn không ? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                               FrmRentBill f=new FrmRentBill(user,rental,txtCusName.Text);
+                                f.ShowDialog();
+                            }
+                        }
                         btnUpdate.Enabled = true;
                         btnDel.Enabled = true;
                         add = false;

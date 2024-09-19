@@ -63,6 +63,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BLLCar.cs" />
@@ -156,6 +162,12 @@
     <Compile Include="GUI\FrmRent.Designer.cs">
       <DependentUpon>FrmRent.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmRentBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmRentBill.Designer.cs">
+      <DependentUpon>FrmRentBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,7 +188,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QRDataSet.cs">
+      <DependentUpon>QRDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QRDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QRDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="GUI\FrmRentBill.resx">
+      <DependentUpon>FrmRentBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ReportBill.rdlc" />
     <EmbeddedResource Include="GUI\FrmAddUser.resx">
       <DependentUpon>FrmAddUser.cs</DependentUpon>
@@ -217,6 +240,7 @@
     <EmbeddedResource Include="GUI\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReportRentBill.rdlc" />
     <EmbeddedResource Include="GUI\ReportReturnCar.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -287,6 +311,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QRDataSet.xsc">
+      <DependentUpon>QRDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QRDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QRDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QRDataSet.xss">
+      <DependentUpon>QRDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\0-1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -347,6 +382,7 @@
     <None Include="Resources\353430-checkbox-edit-pen-pencil_107516.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo-momo-png-1.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

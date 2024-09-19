@@ -56,7 +56,7 @@ namespace CarRental.GUI
             dtpEnd.DataBindings.Add("Text", dgvReturn.DataSource, "EndDate");
             //
             txtAmount.DataBindings.Clear();
-            txtAmount.DataBindings.Add("Text", dgvReturn.DataSource, "RentalFee");
+            txtAmount.DataBindings.Add("Text", dgvReturn.DataSource, "TotalAmount");
             txtAmount.DataBindings[0].FormattingEnabled = true;
             txtAmount.DataBindings[0].FormatString = "#,##";
             //
@@ -222,6 +222,10 @@ namespace CarRental.GUI
             DateTime d2 = dtpReturn.Value.Date;
             TimeSpan t = d2 - d1;
             int RentalDate = Convert.ToInt32(t.TotalDays);
+            if(RentalDate<0)
+            {
+                RentalDate = 0;
+            }
             return RentalDate;
         }
         private void ReturnDelay()
@@ -251,10 +255,23 @@ namespace CarRental.GUI
                 txtAmount.Text = (fee + FineDelay+Sur).ToString();
             }
         }
+        private bool CheckDate()
+        {
+            DateTime d1 = dtpStart.Value.Date;
+            DateTime d2 = dtpReturn.Value.Date;
+            TimeSpan t = d2 - d1;
+            int RentalDate = Convert.ToInt32(t.TotalDays);
+           
+            if(RentalDate > 0)
+            {
+                return true;
+            }
+            else { return false; }
+        }
         private void checkTime()
         {
-            int time = GetDateReturn();
-            if (time < 0)
+            bool time = CheckDate();
+            if (!time )
             {
                 MessageBox.Show("Thời gian không hợp lệ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dtpReturn.Value = dtpEnd.Value;

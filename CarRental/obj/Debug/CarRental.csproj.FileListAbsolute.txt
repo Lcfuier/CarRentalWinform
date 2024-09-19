@@ -73,3 +73,8 @@ D:\LapTrinhC#\Winform\CarRental\CarRental\bin\Debug\zh-CHT\Microsoft.ReportViewe
 D:\LapTrinhC#\Winform\CarRental\CarRental\obj\Debug\CarRental.GUI.FrmReport.resources
 D:\LapTrinhC#\Winform\CarRental\CarRental\obj\Debug\CarRental.csproj.Up2Date
 D:\LapTrinhC#\Winform\CarRental\CarRental\obj\Debug\CarRental.GUI.FrmBill.resources
+D:\LapTrinhC#\Winform\CarRental\CarRental\obj\Debug\CarRental.GUI.FrmRentBill.resources
+D:\LapTrinhC#\Winform\CarRental\CarRental\bin\Debug\zxing.dll
+D:\LapTrinhC#\Winform\CarRental\CarRental\bin\Debug\zxing.presentation.dll
+D:\LapTrinhC#\Winform\CarRental\CarRental\bin\Debug\zxing.xml
+D:\LapTrinhC#\Winform\CarRental\CarRental\bin\Debug\zxing.presentation.xml
