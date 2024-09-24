@@ -196,6 +196,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QRDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RevenueByCarDataSet.cs">
+      <DependentUpon>RevenueByCarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RevenueByCarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RevenueByCarDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="GUI\FrmRentBill.resx">
       <DependentUpon>FrmRentBill.cs</DependentUpon>
@@ -242,6 +250,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ReportRentBill.rdlc" />
     <EmbeddedResource Include="GUI\ReportReturnCar.rdlc" />
+    <EmbeddedResource Include="GUI\ReportRevenueByCar.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -306,6 +315,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RevenueByCarDataSet.xsc">
+      <DependentUpon>RevenueByCarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RevenueByCarDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RevenueByCarDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RevenueByCarDataSet.xss">
+      <DependentUpon>RevenueByCarDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

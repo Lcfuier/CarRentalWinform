@@ -25,6 +25,7 @@ namespace CarRental.GUI
             this.FrmMain = FrmMain;
         }
         BLLReturn BllReturn = new BLLReturn();  
+        BLLCar BllCar = new BLLCar();
         private void FrmReport_Load(object sender, EventArgs e)
         {
            
@@ -44,23 +45,51 @@ namespace CarRental.GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            if (cbType.Text=="")
             {
-                //đặt đường dẫn
-                rpvReturn.LocalReport.ReportEmbeddedResource = "CarRental.GUI.ReportReturnCar.rdlc";
-                //tạo rpDataSource
-                ReportDataSource rp = new ReportDataSource();
-                rp.Name = "DataSet1";//đặt tên trùng report
-                rp.Value = BllReturn.GetReturnReport( dtpStart.Value.ToString(), dtpEnd.Value.ToString());
-                rpvReturn.LocalReport.DataSources.Clear();
-                rpvReturn.LocalReport.DataSources.Add(rp);
+                MessageBox.Show("Chọn loại báo cáo", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (cbType.Text== "Báo cáo tổng doanh thu")
+            {
+                try
+                {
+                    //đặt đường dẫn
+                    rpvReturn.LocalReport.ReportEmbeddedResource = "CarRental.GUI.ReportReturnCar.rdlc";
+                    //tạo rpDataSource
+                    ReportDataSource rp = new ReportDataSource();
+                    rp.Name = "DataSet1";//đặt tên trùng report
+                    rp.Value = BllReturn.GetReturnReport(dtpStart.Value.ToString(), dtpEnd.Value.ToString());
+                    rpvReturn.LocalReport.DataSources.Clear();
+                    rpvReturn.LocalReport.DataSources.Add(rp);
 
-                this.rpvReturn.RefreshReport();
+                    this.rpvReturn.RefreshReport();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
             }
-            catch (Exception ex)
+            else if(cbType.Text== "Báo cáo doanh thu theo xe")
             {
-                MessageBox.Show(ex.Message.ToString());
+                try
+                {
+                    //đặt đường dẫn
+                    rpvReturn.LocalReport.ReportEmbeddedResource = "CarRental.GUI.ReportRevenueByCar.rdlc";
+                    //tạo rpDataSource
+                    ReportDataSource rp = new ReportDataSource();
+                    rp.Name = "DataSet1";//đặt tên trùng report
+                    rp.Value = BllCar.GetRevenueByCarReport(dtpStart.Value.ToString(), dtpEnd.Value.ToString());
+                    rpvReturn.LocalReport.DataSources.Clear();
+                    rpvReturn.LocalReport.DataSources.Add(rp);
+
+                    this.rpvReturn.RefreshReport();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
             }
+            
         }
     }
 }

@@ -109,5 +109,25 @@ namespace CarRental.BLL
             s = "Select * from Car where StatusCar='"+status+"'";
             return Dal.GetDataTable(s);
         }
+
+        public DataTable GetRevenueByCarReport(string dateStar, string dateEnd)
+        {
+            string s;
+            s = $@"SELECT 
+                        C.Id,
+                        C.Brand,
+                        C.Model,
+                        COUNT(RC.Id) AS TotalRentals,
+                        SUM(RC.RentalFee) AS TotalRentalRevenue,
+                        SUM(RC.FineDelay) AS TotalFines,
+	                    SUM(RC.Surcharge) AS TotalSurcharge,
+                        SUM(RC.TotalAmount) AS TotalRevenue
+
+                    FROM 
+                        Car C
+                     INNER JOIN ReturnCar RC ON C.Id = RC.CarId 
+                where RC.ReturnDate BETWEEN '"+dateStar+"' AND '"+dateEnd+"' GROUP BY C.Id, C.Brand, C.Model ORDER BY TotalRevenue DESC";
+            return Dal.GetDataTable(s);
+        }
     }
 }
